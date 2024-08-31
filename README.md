@@ -89,7 +89,6 @@ VertexAIだと，`LLMGraphTransformer`でエラーが出てしまいました．
 :::
 
 
-
 ## こんな感じ
 
 以下が全体像です．`http://localhost:7474/browser/`にアクセスすると，neo4jの画面NodeとEdgeが無数に広がって何がなんだかわかりませんが，ひとまずこれが今回用いたドキュメントをGraphにしたものになります．
@@ -101,7 +100,7 @@ VertexAIだと，`LLMGraphTransformer`でエラーが出てしまいました．
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3618319/ccf0d927-8590-294c-bfe6-c685aaeca8a1.png)
 
-更に絞って，「エレン」と「アルミン」の関係を示したのが下図です．物語の中で，二人の間にはいろいろなことがあったため，関係も複数結びついていることがわかります．
+更に絞って，「エレン」と「アルミン」の関係を示したのが下図(左がエレン，右がアルミン)です．物語の中で，二人の間にはいろいろなことがあったため，関係も複数結びついていることがわかります．
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3618319/184ce750-67f0-1579-f8b2-4240d46710b1.png)
 
@@ -121,7 +120,7 @@ gpt-4oを用いれば何も考えず，テンプレート通りに実行する�
 
 
 # まとめ
-今回はLangchainとneo4jを用いてGraphを構築しました．Graph自体は簡単に構築することができ，眺めるだけでも面白かったです．しかし，記載はしませんでしたが，本来はこれが目的である，構築したGraphを用いてLLMに回答させることを試みましたが，思うような回答が得られませんでした．ここはもう少し工夫の余地があるので，これから改善しようと思います．
+今回はLangchainとneo4jを用いてGraphを構築しました．Graph自体は簡単に構築することができ，眺めるだけでも面白かったです．しかし，記載はしませんでしたが，本来の目的である，構築したGraphを用いてLLMに回答させることを試みたところ，思うような回答が得られませんでした．各NodeのPropertyをもう少し丁寧に付与するなど前処理が必要だと考えられます．ここはもう少し工夫の余地があるので，これから改善しようと思います．
 また，Microsoftが，[graphrag](https://microsoft.github.io/graphrag/)というフレームワークを公開しているのでこちらを触ってみようと思います．
 
 用いたコードはこちら()に格納しております．
@@ -131,3 +130,4 @@ gpt-4oを用いれば何も考えず，テンプレート通りに実行する�
 - [進撃の巨人Wikipedia](https://ja.wikipedia.org/wiki/%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA)
 - [Enhancing RAG-based application accuracy by constructing and leveraging knowledge graphs](https://blog.langchain.dev/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/)
 - [graphrag](https://microsoft.github.io/graphrag/)
+- [LLMによるナレッジグラフの作成とハイブリッド検索 + RAG](https://zenn.dev/yumefuku/articles/llm-neo4j-hybrid#1.-llm%E3%82%92%E4%BD%BF%E3%81%84%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%81%8B%E3%82%89%E3%82%B0%E3%83%A9%E3%83%95%E3%82%92%E7%94%9F%E6%88%90)
