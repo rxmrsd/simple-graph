@@ -15,6 +15,7 @@ langchain-text-splitters = "^0.2.2"
 python-dotenv = "^1.0.1"
 click = "^8.1.7"
 neo4j = "^5.23.1"
+langchain-openai = "^0.1.21"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -22,6 +23,9 @@ mypy = "^1.11.1"
 ruff = "^0.5.7"
 black = "^24.8.0"
 ipykernel = "^6.29.5"
+tiktoken = "^0.7.0"
+json-repair = "^0.27.2"
+wikipedia = "^1.4.0"
 
 [build-system]
 requires = ["poetry-core"]
